@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity, StyleSheet,TouchableWithoutFeedback,KeyboardAvoidingView, TextInput,Keyboard } from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet,TouchableWithoutFeedback,KeyboardAvoidingView, Keyboard, ActivityIndicator, Dimensions,SafeAreaView } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-
+import EmailVerify from './emailVerify.js';
 import 'react-native-gesture-handler';
 import * as firebase from 'firebase';
+import {Item, Input, Label } from 'native-base'
 import { AuthContext } from '../Context/context';
 import  'react-native-gesture-handler';
+
 
 
 
@@ -13,118 +15,141 @@ export default class Register extends Component {
     constructor(props){
         super(props)
             this.state = {
-                fullName:'',
                 email:"",
                 password:"",
-                errorMessage: ''
+                errorMessage: '',
+                loading: null
             };
 
     }
 
 handleSignUp(){
-    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-    .then(() => this.setState({
+    firebase.auth().createUserWithEmailAndPassword(this.state.email.trim(), this.state.password)
+    .then(() => {this.setState({
         fullName: this.state.fullName,
-        email: this.state.email,
+        email: this.state.email.trim().toLowerCase(),
         password: this.state.password,
+        loading: true
         
-    })
+    }) 
+    } 
   )
-    .catch(error => {
+  .catch(error => {
         // Handle Errors here.
         // var errorCode = error.code;
         // var errorMessage = error.message;
         // ...
-
+        
         this.setState({
-            errorMessage: error.errorMessage
+            errorMessage: error.message,
+            email: '',
+            password: '',
+            fullName: '',
+            loading: null
+            
         })
+
+        setTimeout(() => {
+            this.setState({
+                errorMessage: ''
+            })
+        }, 3000)
+        
       });
 }
 
 componentWillUnmount(){
     this.setState({
-        fullName: null,
         email: null,
         password: null,
-        errorMessage: null
+        errorMessage: null,
+        loading: null
     })
 }
 
   render() {
     return (
-
-        <KeyboardAvoidingView
-                keyboardVerticalOffset = {70} 
-                style={{ flex:1 }}
-                behavior = "padding" >
+        <LinearGradient 
+        start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
+        colors={['#626262', '#3d3d3d', '#161616']} 
+        style={styles.linearGradient}
+     >
         <TouchableWithoutFeedback
-        onPress={() =>{
-            Keyboard.dismiss();  
-          }}>
-             
-            
-             <LinearGradient 
-                start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
-                colors={['#009491', '#003837', '#002928']} 
-                style={styles.linearGradient}
-             >
-        <View style={styles.container} >
+            onPress={() =>{
+                Keyboard.dismiss();  
+            }}>
+                <KeyboardAvoidingView
+                keyboardVerticalOffset = {100} 
+                style={{ flex:1 }}
+                behavior = {"padding"}>
+
+        <SafeAreaView style={styles.container} >
             <View style={styles.headerContainer}>
                 <Text style={styles.title}>Register to Start Your Free Account!</Text>
             </View>
             
             <View style={styles.createInputsContainer}>
-               <AuthContext.Consumer>
+                <View style={styles.errorMessage}> 
+                        <Text style={styles.errorText}>
+                            {this.state.errorMessage}
+                        </Text> 
+                    </View>
+                {
+                        this.state.loading === true ?
+                        <ActivityIndicator size="large" color="white" />
+                        :
+
+                        <View></View>
+                    }
+
+                                <Item style={styles.login} floatingLabel>
+                                <Label style={styles.textInputsLable} >Email</Label>
+                                <Input style={styles.textInputs}
+                        onChangeText={(email) => this.setState({ email })}
+                        value={this.state.email.trim().toLowerCase()}/>
+                    
+                                </Item>
+
+                                <Item style={styles.login} floatingLabel >
+                                <Label style={styles.textInputsLable}>Password</Label>
+                                <Input style={styles.textInputs}
+                        onChangeText={(password) => this.setState({ password })}
+                        value={this.state.password}
+                        secureTextEntry={true}/>
+                                </Item>
+                
+                
+            {this.state.email === "" || this.state.password === "" || this.state.errorMessage !== '' ? 
+            
+           
+            <TouchableOpacity 
+                disabled={true}
+                    style={styles.createDisabled}
+                      onPress={() =>{ this.handleSignUp()}}
+                      >
+                        <Text style={styles.createText}> SIGN UP </Text>
+                </TouchableOpacity> 
+                :
+                
+                <AuthContext.Consumer>
                    {(value) => (
                       <TouchableOpacity 
-                    style={styles.create}
-                      onPress={() =>{value.logInUser, this.handleSignUp()}}
+                        style={styles.create}
+                        onPress={() =>{ this.handleSignUp() }}
                       >
-                          <Text style={styles.createText} >Create</Text>
+                          <Text style={styles.createText}> SIGN UP </Text>
                       </TouchableOpacity> 
                     )}
-            </AuthContext.Consumer>
-            <View> 
-                    <Text>
-                        {this.state.errorMessage}
-                    </Text> 
-                </View>
-
-            <View style = {{justifyContent:'center', alignItems: 'center'}}>
-                <TextInput 
-                   style={styles.textInputs}
-                    placeholder= "Full Name..."
-                    placeholderTextColor ="rgba(0,0,0, .6)"
-                    onChangeText={(fullName) => this.setState({ fullName })}
-                    value={this.state.fullName}
-                >
-                    </TextInput>
-                <TextInput 
-                    style={styles.textInputs}
-                    placeholder= "Email..."
-                    placeholderTextColor ="rgba(0,0,0, .6)"
-                    onChangeText={(email) => this.setState({ email })}
-                      value={this.state.email}
-                >
-                </TextInput>
-                <TextInput 
-                    style={styles.textInputs}
-                    placeholder= "Password..."
-                    placeholderTextColor ="rgba(0,0,0, .6)"
-                    onChangeText={(password) => this.setState({ password })}
-                      value={this.state.password}
-                      secureTextEntry={true}
-                >
-                </TextInput>
+                </AuthContext.Consumer>
+            }
             </View>
-            </View>
-            <View style={{flex:1}}></View>
-        </View>
+        </SafeAreaView>
+        </KeyboardAvoidingView>
        
-       </LinearGradient>
-</TouchableWithoutFeedback>
-</KeyboardAvoidingView>
+       
+        </TouchableWithoutFeedback>
+    
+</LinearGradient>
 
     );
   }
@@ -134,85 +159,99 @@ componentWillUnmount(){
 const styles = StyleSheet.create({
     linearGradient: {
         flex: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
-        
+
       },
-    container:{
-        flex:1, 
-        justifyContent:'flex-end', 
+    container:{ 
+        flex:1,
+        justifyContent:'center', 
         alignItems: 'center', 
-      
+        marginTop: Dimensions.get('window').height / 12 * -1,
+        height: Dimensions.get('window').height,
     },
+    textInputsLable:{
+        color:'rgba(255,255,255, .6)',
+        fontSize: 16
+    },
+    errorMessage:{
+        width: '100%'     
+    },
+    errorText:{
+        fontSize: 16,
+        margin: 10,
+        color: 'white'
+    },
+    
     createInputsContainer:{
-        backgroundColor: 'rgba(255, 255, 255, .9)',
+        justifyContent:'center',
         alignItems: 'center',
-        marginLeft:10,
-        marginRight: 10,
-
-        paddingLeft:25,
-        paddingRight: 25,
-        paddingTop: 10,
-        paddingBottom: 20,
-        borderRadius: 10,
-        // shadowOffset: {
-        //   width: 0,
-        //   height: 5,
-        // },
-        // shadowOpacity: 0.9,
-        // shadowRadius: 5,
-
-        // elevation:14,
+        paddingTop: 0,
+        marginTop: 0
+  
+    },
+    login:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderBottomWidth: 1,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+        borderTopWidth: 0,
+        borderBottomColor: 'rgba(255, 255, 255, .95)',
+        width: 300,
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+        backgroundColor: 'transparent',
+        padding:5,
+        marginBottom: '1%'
+        
         
     },
     textInputs:{
-        width:250, 
-        borderBottomWidth: 1, 
-        borderBottomColor: 'black',
-        marginBottom: 50,
-        padding:5,
-        fontSize: 22
+        color: 'white',
+        fontSize: 18
     },
     title:{
-        fontSize:35, 
+        fontSize:30, 
         color:'white',
         textAlign:'center',
         letterSpacing:1,
+        
  
     },
     create:{
-        marginBottom: 50,
-        marginTop: 50,
-        borderBottomWidth: 2,
-        borderTopWidth: 2,
-        borderLeftWidth: 2,
-        borderRightWidth: 2,
-        paddingLeft: 50,
-        paddingRight: 50,
-        paddingTop: 5,
-        paddingBottom: 5,
-        backgroundColor: 'rgba(35, 159, 130, 1)',
+        backgroundColor: 'white',
+        padding:10,
+        // marginBottom: 50,
+        marginTop: '15%',
+        width: 300,
         borderBottomRightRadius: 25,
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         borderBottomLeftRadius: 25,
-        borderColor: 'transparent',
         
     },
+    createDisabled:{
+        backgroundColor: 'gray',
+        padding:10,
+        // marginBottom: 50,
+        marginTop: '15%',
+        width:300,
+        borderBottomRightRadius: 25,
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
+        borderBottomLeftRadius: 25,
+    },
     createText:{
-        color: 'white',
-        fontSize: 25,
-        letterSpacing: 3,
-
+        color: 'black',
+        fontSize: 16,
+        textAlign:'center'
     },
     headerContainer:{
         flexDirection: 'row',
         justifyContent:'center',
         alignItems: 'center',
-        width:'100%',
-        height: 200,
+        width:'90%',
         textAlign:'center',
-        backgroundColor: 'transparent',
         
     }
 })

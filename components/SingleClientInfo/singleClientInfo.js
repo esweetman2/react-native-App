@@ -29,12 +29,9 @@ export default class singleClientInfo extends Component {
   }
 
   componentDidMount() {
-    console.log(this.state.clientInfo)
-    console.log(`${this.state.clientInfo[0].key}${this.state.clientInfo[0].name}`)
+    // console.log(this.state.clientInfo)
+    // console.log(`${this.state.clientInfo[0].key}${this.state.clientInfo[0].name}`)
     
-    
-
-
     this.getClientInfo(`${this.state.clientInfo[0].key}${this.state.clientInfo[0].name}`)
       .then(infoDetails => {
 
@@ -58,7 +55,7 @@ export default class singleClientInfo extends Component {
       // read key error
     }
 
-    console.log(keys)
+    // console.log(keys)
     // example console.log result:
     // ['@MyApp_user', '@MyApp_key']
 
@@ -211,7 +208,7 @@ export default class singleClientInfo extends Component {
         
         
       }}>
-        <Text style={{ fontWeight: 'bold', fontSize: 22 }}>
+        <Text style={{  fontSize: 22 }}>
           {" "}{item.title}
         </Text>
         {expanded
@@ -240,9 +237,8 @@ export default class singleClientInfo extends Component {
                 padding: 10,
                 fontStyle: "italic",
                 fontSize: 25,
-                
-                textAlign: 'center',
                 borderBottomWidth: 2,
+                fontWeight: "bold"
               }}>
               Notes
             </Text>
@@ -259,7 +255,7 @@ export default class singleClientInfo extends Component {
               padding: 10,
               fontStyle: "italic",
               fontSize: 25,
-              textAlign:'center'
+              fontWeight: "bold"
             }}>
             Retail
           </Text>
@@ -331,9 +327,7 @@ export default class singleClientInfo extends Component {
           this.findEditIndex(item.key)
         }}>
               <Text 
-              style={styles.cancelSaveText}
-              
-              >Save</Text>
+              style={styles.cancelSaveText}>Save</Text>
               
             </TouchableOpacity>
   
@@ -385,7 +379,7 @@ renderAccordion(item) {
     return (
       <View style={{ flex: 1, backgroundColor: "rgba(229, 240, 255, .1)"}}>
         <View style={styles.headerWithBtn}>
-          <Text style={{fontSize: 25}}>Notes</Text>
+          <Text style={{fontSize: 20, fontFamily: 'helveticaneue-lightitalic'}}> Log appointment info </Text>
           <TouchableHighlight style={styles.button}
             onPress={() => {
               this.setModalVisible(true);
@@ -406,13 +400,6 @@ renderAccordion(item) {
         </View> 
         </KeyboardAvoidingView>
         
-        
-
-      
-
-        
-
-
         <Modal
           animationType="slide"
           transparent={false}
@@ -421,9 +408,9 @@ renderAccordion(item) {
           <Container>
             <Content padder>
               <Card>
-                <CardItem Header>
-                  <Text style ={{fontSize: 18}}>
-                    Below you can add information about the days visit.
+                <CardItem Header style={{ justifyContent:'center', alignContent:'center'}}>
+                  <Text style ={{fontSize: 20,textAlign:'center', width:250, fontFamily:'baskerville'}}>
+                    Add visit notes
                     </Text>
                 </CardItem>
                 <CardItem >
@@ -523,11 +510,9 @@ const styles = StyleSheet.create({
   button: {
     justifyContent: 'center',
     alignItems: 'center',
-    
     backgroundColor: 'transparent',
     width: 50,
     height: 50,
-
     padding: 0,
     margin:0,
 
@@ -558,20 +543,19 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1, 
     borderBottomColor: 'lightgray',
     width: '75%',
-    marginTop: 20
+    marginTop: 20,
   },
   accordionNotes:{
     padding: 10,
     maxWidth: 500, 
     fontSize: 18,
+ 
     
   },
   contentContainer:{
     flex: 1, 
-    marginTop: -1,
-    marginBottom:20, 
-    // marginRight:20,
-    // marginLeft:20, 
+    marginTop: -5,
+    marginBottom:20,  
     justifyContent: 'center', 
     alignItems:'center', 
     backgroundColor: 'white'
@@ -579,10 +563,11 @@ const styles = StyleSheet.create({
   },
   cancelSave:{
     margin: 15,
-    backgroundColor: "blue",
+    backgroundColor: "#7c7c7c",
     paddingLeft: 25,
     paddingRight: 25,
     paddingTop: 10,
+    borderRadius: 5,
     paddingBottom: 10,
     width: 150,
     justifyContent:'center',
@@ -593,14 +578,16 @@ const styles = StyleSheet.create({
   cancelSaveText:{
     fontSize: 18,
     color:"white",
+    fontWeight: '900'
   },
   deleteNotesBtn:{
     backgroundColor: 'red',
-    width: 150,
+    width: 300,
     justifyContent: 'center',   
     alignContent: 'center', 
     alignItems: 'center',
     margin:15, 
+    borderRadius: 5,
   },
   deleteNotesText:{
     fontSize: 18, 
@@ -610,24 +597,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', 
     paddingLeft:25, 
     paddingRight: 25, 
-    paddingTop: 10, 
-    paddingBottom: 10, 
+    paddingTop: 7, 
+    paddingBottom: 7, 
     textAlign:'center'
   },
   editNotesBtn:{
     justifyContent: 'center', 
-  
+    borderRadius: 5,
     marginTop: 50,
-    backgroundColor: 'blue',
-    width:150
+    backgroundColor: 'gray',
+    width:300
   },
   editNotesText:{
     fontSize: 18,
     color:'white',
     paddingLeft:25, 
     paddingRight: 25, 
-    paddingTop: 10, 
-    paddingBottom: 10, 
+    paddingTop: 7, 
+    paddingBottom: 7, 
     textAlign:"center",
     fontWeight: 'bold'
   }

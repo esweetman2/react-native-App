@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* HairSalonAppRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HairSalonAppRNTests.m */; };
+		0C7BB375CC7500B6498175F3 /* libPods-HairSalonAppRN-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885DE67754891AF089D2F659 /* libPods-HairSalonAppRN-tvOS.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2902E8D8F1C81328A1EB05C7 /* libPods-HairSalonAppRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D89459FF93D67B154E32709 /* libPods-HairSalonAppRN.a */; };
-		2B7A6A877A74379D9DFAE3AF /* libPods-HairSalonAppRN-HairSalonAppRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF644EA8C88C99A040BE527 /* libPods-HairSalonAppRN-HairSalonAppRNTests.a */; };
+		212DE2BAA5463CD2A3144AA0 /* libPods-HairSalonAppRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 841330F3BDF523750E3256A0 /* libPods-HairSalonAppRN.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* HairSalonAppRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HairSalonAppRNTests.m */; };
-		6BB3F6CDB740304285551E58 /* libPods-HairSalonAppRN-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DF3EC3626147D3FF2B79DA /* libPods-HairSalonAppRN-tvOSTests.a */; };
-		79D793751FAA280727E2EA93 /* libPods-HairSalonAppRN-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 679B44033F69982CCFD1544A /* libPods-HairSalonAppRN-tvOS.a */; };
+		6C864ABDEFDA9ADD8326ED9A /* libPods-HairSalonAppRN-HairSalonAppRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8796307979B648E534E610B1 /* libPods-HairSalonAppRN-HairSalonAppRNTests.a */; };
+		8779744B6F4C4EBA6C18DE45 /* libPods-HairSalonAppRN-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3DE87B9DBF0D0A6E9900B0 /* libPods-HairSalonAppRN-tvOSTests.a */; };
+		B82488AC251AE47500E3B71E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B82488AB251AE47500E3B71E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		00E356EE1AD99517003FC87E /* HairSalonAppRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HairSalonAppRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HairSalonAppRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HairSalonAppRNTests.m; sourceTree = "<group>"; };
-		107CC3E78E6122B311FDF840 /* Pods-HairSalonAppRN-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOSTests/Pods-HairSalonAppRN-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0646CCAAABBDD88DA45B20CD /* Pods-HairSalonAppRN-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOS/Pods-HairSalonAppRN-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HairSalonAppRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairSalonAppRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HairSalonAppRN/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HairSalonAppRN/AppDelegate.m; sourceTree = "<group>"; };
@@ -52,19 +53,21 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HairSalonAppRN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; explicitFileType = image.icns; fileEncoding = 4; name = Info.plist; path = HairSalonAppRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HairSalonAppRN/main.m; sourceTree = "<group>"; };
-		22DF3EC3626147D3FF2B79DA /* libPods-HairSalonAppRN-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B63BCC60432A72AF01CD8E /* Pods-HairSalonAppRN-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOS.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOS/Pods-HairSalonAppRN-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		1A3DE87B9DBF0D0A6E9900B0 /* libPods-HairSalonAppRN-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9D37AD0BB8FE0070786F11 /* Pods-HairSalonAppRN-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOSTests/Pods-HairSalonAppRN-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* HairSalonAppRN-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HairSalonAppRN-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* HairSalonAppRN-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HairSalonAppRN-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3025A2E06E9FD0BCD981532A /* Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-HairSalonAppRNTests/Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3D89459FF93D67B154E32709 /* libPods-HairSalonAppRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B32DAB89F85405728F40113 /* Pods-HairSalonAppRN-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOS/Pods-HairSalonAppRN-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		679B44033F69982CCFD1544A /* libPods-HairSalonAppRN-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9103BB4314962D72F4C956AA /* Pods-HairSalonAppRN-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOSTests/Pods-HairSalonAppRN-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		9FF644EA8C88C99A040BE527 /* libPods-HairSalonAppRN-HairSalonAppRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN-HairSalonAppRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A55053D0852D1B100FCC6DE1 /* Pods-HairSalonAppRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN/Pods-HairSalonAppRN.release.xcconfig"; sourceTree = "<group>"; };
-		AFABE455B3E6DD31B43941E8 /* Pods-HairSalonAppRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN/Pods-HairSalonAppRN.debug.xcconfig"; sourceTree = "<group>"; };
-		B3737361DC394992B3E27FED /* Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-HairSalonAppRNTests/Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		35733629A498A641EDCFAA3B /* Pods-HairSalonAppRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN/Pods-HairSalonAppRN.release.xcconfig"; sourceTree = "<group>"; };
+		3AAE7E31B8B82DCE28BFE68A /* Pods-HairSalonAppRN-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOS.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOS/Pods-HairSalonAppRN-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		841330F3BDF523750E3256A0 /* libPods-HairSalonAppRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A44647AA52CD677A48483F /* Pods-HairSalonAppRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN/Pods-HairSalonAppRN.debug.xcconfig"; sourceTree = "<group>"; };
+		8796307979B648E534E610B1 /* libPods-HairSalonAppRN-HairSalonAppRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN-HairSalonAppRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		885DE67754891AF089D2F659 /* libPods-HairSalonAppRN-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HairSalonAppRN-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A879FF43DF87E3AC1373CD /* Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-HairSalonAppRNTests/Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		B82488AA251AE45600E3B71E /* HairSalonAppRN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HairSalonAppRN.entitlements; path = HairSalonAppRN/HairSalonAppRN.entitlements; sourceTree = "<group>"; };
+		B82488AB251AE47500E3B71E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C0A8F6C3424184E13A7DAD84 /* Pods-HairSalonAppRN-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-tvOSTests/Pods-HairSalonAppRN-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C90BC12A1FA62E7B69E42478 /* Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig"; path = "Target Support Files/Pods-HairSalonAppRN-HairSalonAppRNTests/Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B7A6A877A74379D9DFAE3AF /* libPods-HairSalonAppRN-HairSalonAppRNTests.a in Frameworks */,
+				6C864ABDEFDA9ADD8326ED9A /* libPods-HairSalonAppRN-HairSalonAppRNTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2902E8D8F1C81328A1EB05C7 /* libPods-HairSalonAppRN.a in Frameworks */,
+				212DE2BAA5463CD2A3144AA0 /* libPods-HairSalonAppRN.a in Frameworks */,
+				B82488AC251AE47500E3B71E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79D793751FAA280727E2EA93 /* libPods-HairSalonAppRN-tvOS.a in Frameworks */,
+				0C7BB375CC7500B6498175F3 /* libPods-HairSalonAppRN-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BB3F6CDB740304285551E58 /* libPods-HairSalonAppRN-tvOSTests.a in Frameworks */,
+				8779744B6F4C4EBA6C18DE45 /* libPods-HairSalonAppRN-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +129,7 @@
 		13B07FAE1A68108700A75B9A /* HairSalonAppRN */ = {
 			isa = PBXGroup;
 			children = (
+				B82488AA251AE45600E3B71E /* HairSalonAppRN.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -139,12 +144,13 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B82488AB251AE47500E3B71E /* CloudKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				3D89459FF93D67B154E32709 /* libPods-HairSalonAppRN.a */,
-				9FF644EA8C88C99A040BE527 /* libPods-HairSalonAppRN-HairSalonAppRNTests.a */,
-				679B44033F69982CCFD1544A /* libPods-HairSalonAppRN-tvOS.a */,
-				22DF3EC3626147D3FF2B79DA /* libPods-HairSalonAppRN-tvOSTests.a */,
+				841330F3BDF523750E3256A0 /* libPods-HairSalonAppRN.a */,
+				8796307979B648E534E610B1 /* libPods-HairSalonAppRN-HairSalonAppRNTests.a */,
+				885DE67754891AF089D2F659 /* libPods-HairSalonAppRN-tvOS.a */,
+				1A3DE87B9DBF0D0A6E9900B0 /* libPods-HairSalonAppRN-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,14 +191,14 @@
 		BDA694CC671B5D7F9577EBB5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AFABE455B3E6DD31B43941E8 /* Pods-HairSalonAppRN.debug.xcconfig */,
-				A55053D0852D1B100FCC6DE1 /* Pods-HairSalonAppRN.release.xcconfig */,
-				3025A2E06E9FD0BCD981532A /* Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig */,
-				B3737361DC394992B3E27FED /* Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig */,
-				5B32DAB89F85405728F40113 /* Pods-HairSalonAppRN-tvOS.debug.xcconfig */,
-				27B63BCC60432A72AF01CD8E /* Pods-HairSalonAppRN-tvOS.release.xcconfig */,
-				107CC3E78E6122B311FDF840 /* Pods-HairSalonAppRN-tvOSTests.debug.xcconfig */,
-				9103BB4314962D72F4C956AA /* Pods-HairSalonAppRN-tvOSTests.release.xcconfig */,
+				86A44647AA52CD677A48483F /* Pods-HairSalonAppRN.debug.xcconfig */,
+				35733629A498A641EDCFAA3B /* Pods-HairSalonAppRN.release.xcconfig */,
+				C90BC12A1FA62E7B69E42478 /* Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig */,
+				A1A879FF43DF87E3AC1373CD /* Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig */,
+				0646CCAAABBDD88DA45B20CD /* Pods-HairSalonAppRN-tvOS.debug.xcconfig */,
+				3AAE7E31B8B82DCE28BFE68A /* Pods-HairSalonAppRN-tvOS.release.xcconfig */,
+				1C9D37AD0BB8FE0070786F11 /* Pods-HairSalonAppRN-tvOSTests.debug.xcconfig */,
+				C0A8F6C3424184E13A7DAD84 /* Pods-HairSalonAppRN-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -204,11 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "HairSalonAppRNTests" */;
 			buildPhases = (
-				48340A5E5DDE3DD577EDDF94 /* [CP] Check Pods Manifest.lock */,
+				782CED4206C7B4D61A3329B9 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				D2C63D87FC302FD94AB78521 /* [CP] Copy Pods Resources */,
+				58D4D48F2A1A16065C498F84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,13 +230,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HairSalonAppRN" */;
 			buildPhases = (
-				11B430F1EAFB3131A6B7E738 /* [CP] Check Pods Manifest.lock */,
+				F384D08DB8D659ABA4229A87 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				AF43CF56BA6CB86B8AC83921 /* [CP] Copy Pods Resources */,
+				38691037175947727C80BBAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,7 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "HairSalonAppRN-tvOS" */;
 			buildPhases = (
-				529D0B9468ABAEF61E6A1767 /* [CP] Check Pods Manifest.lock */,
+				381D24C76AB8E8003BA28F5A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -265,7 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "HairSalonAppRN-tvOSTests" */;
 			buildPhases = (
-				FB8D3C003E71E05D4CAF25D8 /* [CP] Check Pods Manifest.lock */,
+				072C3F268CF6677B9AF190A5 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -286,7 +292,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1170;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -378,7 +384,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		11B430F1EAFB3131A6B7E738 /* [CP] Check Pods Manifest.lock */ = {
+		072C3F268CF6677B9AF190A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,7 +399,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HairSalonAppRN-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-HairSalonAppRN-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -414,29 +420,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		48340A5E5DDE3DD577EDDF94 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HairSalonAppRN-HairSalonAppRNTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		529D0B9468ABAEF61E6A1767 /* [CP] Check Pods Manifest.lock */ = {
+		381D24C76AB8E8003BA28F5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,7 +442,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AF43CF56BA6CB86B8AC83921 /* [CP] Copy Pods Resources */ = {
+		38691037175947727C80BBAD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,7 +490,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HairSalonAppRN/Pods-HairSalonAppRN-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2C63D87FC302FD94AB78521 /* [CP] Copy Pods Resources */ = {
+		58D4D48F2A1A16065C498F84 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -554,7 +538,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HairSalonAppRN-HairSalonAppRNTests/Pods-HairSalonAppRN-HairSalonAppRNTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB8D3C003E71E05D4CAF25D8 /* [CP] Check Pods Manifest.lock */ = {
+		782CED4206C7B4D61A3329B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,7 +553,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HairSalonAppRN-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-HairSalonAppRN-HairSalonAppRNTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F384D08DB8D659ABA4229A87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HairSalonAppRN-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -681,10 +687,11 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3025A2E06E9FD0BCD981532A /* Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig */;
+			baseConfigurationReference = C90BC12A1FA62E7B69E42478 /* Pods-HairSalonAppRN-HairSalonAppRNTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				DEVELOPMENT_TEAM = H4H6Y63PU2;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -706,10 +713,11 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3737361DC394992B3E27FED /* Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig */;
+			baseConfigurationReference = A1A879FF43DF87E3AC1373CD /* Pods-HairSalonAppRN-HairSalonAppRNTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = H4H6Y63PU2;
 				INFOPLIST_FILE = HairSalonAppRNTests/Info.plist;
@@ -728,11 +736,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFABE455B3E6DD31B43941E8 /* Pods-HairSalonAppRN.debug.xcconfig */;
+			baseConfigurationReference = 86A44647AA52CD677A48483F /* Pods-HairSalonAppRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_ENTITLEMENTS = HairSalonAppRN/HairSalonAppRN.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4H6Y63PU2;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -741,12 +750,13 @@
 				);
 				INFOPLIST_FILE = HairSalonAppRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.12;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.HairSalonAppRN;
 				PRODUCT_NAME = HairSalonAppRN;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -757,21 +767,23 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A55053D0852D1B100FCC6DE1 /* Pods-HairSalonAppRN.release.xcconfig */;
+			baseConfigurationReference = 35733629A498A641EDCFAA3B /* Pods-HairSalonAppRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_ENTITLEMENTS = HairSalonAppRN/HairSalonAppRN.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4H6Y63PU2;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = HairSalonAppRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.12;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.HairSalonAppRN;
 				PRODUCT_NAME = HairSalonAppRN;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -781,7 +793,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B32DAB89F85405728F40113 /* Pods-HairSalonAppRN-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 0646CCAAABBDD88DA45B20CD /* Pods-HairSalonAppRN-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -809,7 +821,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27B63BCC60432A72AF01CD8E /* Pods-HairSalonAppRN-tvOS.release.xcconfig */;
+			baseConfigurationReference = 3AAE7E31B8B82DCE28BFE68A /* Pods-HairSalonAppRN-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -837,7 +849,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 107CC3E78E6122B311FDF840 /* Pods-HairSalonAppRN-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 1C9D37AD0BB8FE0070786F11 /* Pods-HairSalonAppRN-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -864,7 +876,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9103BB4314962D72F4C956AA /* Pods-HairSalonAppRN-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = C0A8F6C3424184E13A7DAD84 /* Pods-HairSalonAppRN-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -997,6 +1009,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

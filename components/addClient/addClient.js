@@ -74,7 +74,7 @@ export default class AddClientInfo extends Component {
           if (clients !== null) {
                       return clients
                     }else{
-                      console.log("clients error")
+                      // console.log("clients error")
                     }
         }
       }
@@ -176,14 +176,14 @@ randomKey(list){
           addingClient: "",
         })
       }
-      console.log(this.state.clients)
+      // console.log(this.state.clients)
     }
 
     deleteClient(key){
       let clients = [...this.state.clients];
       const index = clients.findIndex(item => item.key === key);
       let notesInfo = `${clients[index].key}${clients[index].name}`
-      console.log(notesInfo);
+      // console.log(notesInfo);
       let contactInfo = `${clients[index].key}${clients[index].name}contact`
     
       Alert.alert(
@@ -355,14 +355,14 @@ const renderHiddenItem = (data, rowMap) => (
       <TouchableWithoutFeedback onPress={() =>{
         Keyboard.dismiss();  
       }}>
-        <View style= {{flex:1}}>
+        <View style= {{flex:1, backgroundColor: 'white'}}>
         {/* <TextInput 
           style = {styles.editClientTextInput}
           placeholder="Search"
           onChangeText={(text) => this.searchClientList(text)}
           value={this.state.searching}          
         /> */}
-          <View style={{flexDirection:'row', justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{flexDirection:'row', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ececec'}}>
           <TouchableOpacity
                   style ={styles.addButton}
                     onPress={() => {
@@ -376,52 +376,57 @@ const renderHiddenItem = (data, rowMap) => (
 
           <Modal
             animationType="slide"
-            transparent={false}
+            transparent={true}
             visible={this.state.modalVisible}
           >
-            {/* <View style= {styles.addClientOverlay}>
-
-            </View> */}
+            <TouchableWithoutFeedback onPress={() =>{
+                      Keyboard.dismiss();  
+                    }}>
               
               <KeyboardAvoidingView 
-              keyboardVerticalOffset = {20} 
-               style ={styles.addClientScreen}>
-              <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-                <TouchableOpacity
-                style={{width: 75}}
-                    onPress={() => {this.setModalVisible(!this.state.modalVisible)}}
-                  >
-                    <Icon name= 'minus' size={70} style ={{textAlign: 'center',marginTop: 0,color: 'white'}}/>
-                     
-                  </TouchableOpacity>
-              </View>
+              keyboardVerticalOffset={20} 
+               style ={styles.addClientScreen}
+               behavior={'padding'}
+              >
+                
+              <View style={{flex:1, alignItems:'center'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center', alignItems:'center'}}>
+                  <TouchableOpacity
+                  style={{width: 75}}
+                      onPress={() => {this.setModalVisible(!this.state.modalVisible)}}
+                    >
+                      <Icon name= 'down' size={40} style ={{textAlign: 'center',marginTop: '5%',color: 'white'}}/>
+                      
+                    </TouchableOpacity>
+                </View>
              
                   <TextInput 
                     style = {styles.addClientTextInput}
-                    placeholder="Enter Client Here!"
-                    placeholderTextColor= "rgba(255, 255, 255, .8)"
+                    placeholder="Client Name"
+                    placeholderTextColor= "rgba(255, 255, 255, .5)"
                     onChangeText={(addingClient) => this.setState({addingClient})}
                     value={this.state.addingClient}
                     
                   />
-                  {this.state.addingClient =="" ? <TouchableOpacity
-                  style={{
-                    textAlign: 'center', 
-                    width: '50%' ,
-                    height: 50, 
-                    backgroundColor: 'rgba(166, 211, 232, .1)', 
-                    margin:10,
-                    marginTop: 25, 
-                    justifyContent: 'center', 
-                    alignItems: 'center',
-                    borderRadius: 50,
-                  }}
-                    onPress={this.addClient.bind(this)}
-                    onPressOut={() => {
-                      this.setModalVisible(!this.state.modalVisible);
+                  {this.state.addingClient === "" ? 
+
+                    <TouchableOpacity
+                    style={{
+                      textAlign: 'center', 
+                      width: 300 ,
+                      height: 40, 
+                      backgroundColor: 'rgba(166, 211, 232, .1)', 
+                      marginTop: 25, 
+                      justifyContent: 'center', 
+                      alignItems: 'center',
+                      borderRadius: 50,
                     }}
-                  > 
-                    <Icon name= 'check' size= {30} style ={styles.submitClient}/>
+                      onPress={this.addClient.bind(this)}
+                      onPressOut={() => {
+                        this.setModalVisible(!this.state.modalVisible);
+                      }}
+                    > 
+                    <Icon name= 'adduser' size= {30} style ={styles.submitClient}/>
                     {/* <Text style ={styles.submitClient}> ADD</Text> */}
                 </TouchableOpacity>
               :
@@ -432,15 +437,15 @@ const renderHiddenItem = (data, rowMap) => (
                       this.setModalVisible(!this.state.modalVisible);
                     }}
                   > 
-                    <Icon name= 'check' size= {30} style ={styles.submitClient}/>
+                    <Icon name= 'adduser' size= {30} style ={styles.submitClient}/>
                     
                 </TouchableOpacity>  
               }
 
                 
-                
+          </View>
               </KeyboardAvoidingView>
-             
+              </TouchableWithoutFeedback>
           </Modal>
         <KeyboardAvoidingView 
         behavior={'padding'} 
@@ -476,19 +481,20 @@ const styles = StyleSheet.create({
   addButton:{
     justifyContent: 'center',
     alignItems: 'center',
-        backgroundColor: 'rgba(166, 211, 232, 1)',
-        padding: 10,
-        width: 125,
-        height: 50,
-        margin: 'auto',
-    marginTop: 20,
-    marginBottom: 20,
-    borderRadius: 25
+    backgroundColor: 'rgba(166, 211, 232, .5)',
+    padding: 10,
+    width: 50,
+    height: 50,
+    margin: 'auto',
+    marginTop: 15,
+    marginBottom: 15,
+    borderRadius: 50,
+
   },
   submitClientBtn:{
     textAlign: 'center', 
-    width: '50%' ,
-    height: 50, 
+    width: 300 ,
+    height: 40, 
     backgroundColor: 'rgba(166, 211, 232, 1)', 
     margin:10,
     marginTop: 25, 
@@ -499,30 +505,17 @@ const styles = StyleSheet.create({
   },
   submitClient:{
     color:'black', 
-    
-
   },
-  // addClientOverlay:{
-  //   width: '100%',
-  //   height: '100%', 
-  //   // zIndex: -1, 
-  //   backgroundColor: 'black', 
-  //   opacity: .9, 
-  //   position: 'absolute', 
-  //   left: 0, 
-  //   top: '5%',
-  //   borderTopLeftRadius: 25,
-  //   borderTopRightRadius: 25,
-    
-  // },
+  
   addClientScreen: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
     height: '75%',
-    backgroundColor:'rgba(0, 0, 0, .8)',
-    marginTop: 70,
+    width:'100%',
+    backgroundColor:'rgba(74, 74, 74, 1)',
+    marginTop: "20%",
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
     
@@ -539,7 +532,9 @@ const styles = StyleSheet.create({
 
   },
   addClientTextInput:{
-    fontSize: 25,
+    alignItems:'center',
+    justifyContent: 'center',
+    fontSize: 18,
     paddingTop: 10,
     paddingBottom:10,
     paddingLeft: 0,
@@ -548,33 +543,31 @@ const styles = StyleSheet.create({
     color:'white',
     borderBottomWidth: 2,
     borderLeftWidth: 0,
-   borderRightWidth: 0,
-   borderTopWidth: 0,
-   borderBottomColor: 'white',
-   width: '75%',
-   
-   margin: 20,
-   marginTop: 150
+    borderRightWidth: 0,
+    borderTopWidth: 0,
+    borderBottomColor: 'white',
+    width: 300,
+  //  margin: 20,
+   marginTop: 75
   
   },
   editClientTextInput:{
-    fontSize: 25,
+    fontSize: 18,
     paddingTop: 5,
     paddingBottom:5,
     paddingLeft: 0,
     paddingRight: 0, 
-    backgroundColor: 'transparent',
+    color:'black',
     borderBottomWidth: 2,
     borderLeftWidth: 0,
-   borderRightWidth: 0,
-   borderTopWidth: 0,
-   opacity: .6,
-   borderBottomColor: 'black',
-   width: '50%',
-
-   margin: 5,
-   paddingLeft: 5, 
-  },
+    borderRightWidth: 0,
+    borderTopWidth: 0,
+    opacity: .6,
+    borderBottomColor: 'black',
+    width: '50%',
+    margin: 5,
+    paddingLeft: 5, 
+    },
   listContainer:{
     flex:1,
     // marginTop:10,
@@ -593,18 +586,10 @@ const styles = StyleSheet.create({
         shadowColor: "#000",
         borderBottomWidth: 2,
         borderBottomColor: 'lightgray',
-        // shadowOffset: {
-        //   width: 0,
-        //   height: 1,
-        // },
-        // shadowOpacity: 0.41,
-        // shadowRadius: 5,
-
-        // elevation:14,
         
   },
   listText:{
-    fontSize: 25,
+    fontSize: 22,
     textTransform: "capitalize",
     marginRight:25,
     padding:15,

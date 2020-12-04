@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity, StyleSheet, ImageBackground, Alert } from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet, ImageBackground, Alert, SafeAreaView } from 'react-native';
 import 'react-native-gesture-handler';
 import * as firebase from 'firebase';
 
@@ -27,9 +27,10 @@ export default class Home extends Component {
                 user: ""
             };
     }
+    
 
   componentDidMount(){
-      this._isMounted = true;
+    this._isMounted = true;
     firebase.auth().onAuthStateChanged((user) => {
         if (user && this._isMounted === true) {
           this.setState({
@@ -83,10 +84,10 @@ handleSignOut(){
         style={styles.imageBackground}
         source= {require('../images/grayscale-photo-of-woman-1399073.jpg')}
         >
-            <View style = {styles.homeContainer}>
+            <SafeAreaView style = {styles.homeContainer}>
                 <View style={styles.welcomeContainer}>
-    <Text style={styles.welcomeText}>Welcome Back</Text>
-    <Text style={styles.welcomeSubText}>Select view clients to start managing notes for each of your client's!</Text>
+                    <Text style={styles.welcomeText}>SalonSort</Text>
+                    <Text style={styles.welcomeSubText}>Select view clients to start managing notes for your clientele!</Text>
     
                 </View>
                 <TouchableOpacity
@@ -99,16 +100,19 @@ handleSignOut(){
 
                    <AuthContext.Consumer>
                        {(value) => (
-                           <TouchableOpacity 
-                    
-                           onPress={() =>{value.logOutUser,  this.handleSignOut()}}
-                           >
-                               <Text style= {styles.text}>Log Out</Text>
-                           </TouchableOpacity>
+                           <View >
+                            <TouchableOpacity 
+                        
+                            onPress={() =>{value.logOutUser,  this.handleSignOut()}}
+                            >
+                                <Text style= {styles.text}>Log Out</Text>
+                            </TouchableOpacity>
+                           </View>
                        )}
                        
+                       
                         </AuthContext.Consumer>
-            </View>
+            </SafeAreaView>
       </ImageBackground>
 
     );
@@ -123,34 +127,35 @@ const styles = StyleSheet.create({
     },
     homeContainer:{
         flex:1,
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
-        backgroundColor: 'rgba(166, 211, 232, .7)',
+        backgroundColor: 'rgba(40, 41, 41, .8)',
         width: '100%',
        
         
     },
     welcomeContainer:{
         width: '100%',
-        marginTop:-150,
-        marginBottom: 150,
-        
-        
     },
     welcomeText:{
-        fontSize: 45,
+        fontSize: 60,
         textAlign: 'center',
-        color:'black'
-        
+        color:'rgba(255, 255, 255, .8)',
+        fontWeight: '900',
+        fontFamily: 'Snell Roundhand',
+        letterSpacing: 1.5 
     },
     welcomeSubText:{
         fontSize: 20,
         textAlign: 'center',
-        color:'black',
-        
+        color:'rgba(255, 255, 255, .9)',
+        fontWeight: '300',
+        fontFamily: 'arial',
+        fontStyle:'italic',
         paddingTop: 35,
         paddingLeft:50,
-        paddingRight: 50
+        paddingRight: 50,
+        letterSpacing: 1
     },
     viewClient:{
         borderBottomWidth: 2,
@@ -162,7 +167,7 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
         paddingLeft: 30,
         paddingRight: 30,
-        backgroundColor: 'rgba(151, 232, 213, .5)',
+        backgroundColor: 'rgba(151, 232, 213, .6)',
     
     },
     userContainer:{ 
@@ -175,64 +180,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
+        
 
     },
-    login:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom:25,
-        borderBottomWidth: 2,
-        borderLeftWidth: 0,
-        borderRightWidth: 0,
-        borderTopWidth: 0,
-        borderBottomColor: 'white',
-        width: '75%',
-        
-        fontSize: 25,
-        backgroundColor: 'transparent',
-        paddingTop: 5,
-        paddingBottom: 5,
-        paddingLeft: 18
-    },
-    loginBtn:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 50,
-        marginBottom:30,
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10,
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        width: '75%',
-        backgroundColor: '#EAFEFF',  
-        paddingTop: 10,
-        paddingBottom: 10,
-        
-    },
-    register:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderBottomLeftRadius: 50,
-        borderBottomRightRadius: 50,
-        borderTopLeftRadius: 50,
-        borderTopRightRadius: 50,
-        width: '60%',
-        backgroundColor: '#EAFEFF',  
-        paddingTop: 10,
-        paddingBottom: 10,
-        
-    },
     viewClientsText:{
-        color: 'rgba(0, 0, 0, .8)',
+        color: 'rgba(255,255,255, .8)',
         fontSize: 25,
-        letterSpacing: 5
+        letterSpacing: 2,
+        textTransform: 'uppercase',
+        fontWeight: 'bold'
     },
     text:{
-        color: 'black',
+        color: 'rgba(255, 255, 255, 1)',
         fontSize: 18,
         padding:10,
-        marginTop: 50,
-        fontWeight: 'bold'
-        
     }
 })
